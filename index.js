@@ -1,4 +1,4 @@
-function loadScript(src) {
+async function loadScript(src) {
   return new Promise((resolve, reject) => {
     const script = document.createElement('script')
     script.setAttribute("src", src)
@@ -9,7 +9,9 @@ function loadScript(src) {
   })
 }
 
-function loadCSS(href) {
+'use strict';
+
+async function loadCSS(href) {
   return new Promise((resolve, reject) => {
     const link = document.createElement('link')
     link.setAttribute("rel", "stylesheet")
@@ -22,7 +24,7 @@ function loadCSS(href) {
   })
 }
 
-export {
+module.exports = {
   loadScript,
   loadCSS
 }
