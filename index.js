@@ -1,3 +1,5 @@
+'use strict';
+
 async function loadScript(src) {
   return new Promise((resolve, reject) => {
     const script = document.createElement('script')
@@ -8,8 +10,6 @@ async function loadScript(src) {
     script.onerror = reject
   })
 }
-
-'use strict';
 
 async function loadCSS(href) {
   return new Promise((resolve, reject) => {
